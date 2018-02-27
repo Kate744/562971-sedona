@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ekaterina Filippova](https://up.htmlacademy.ru/htmlcss/20/user/562971).
-* Наставник: Александр Горбачев.
+* Наставник: [Александр Горбачев](https://htmlacademy.ru/profile/hrbchv).
 
 ---
 
