@@ -8,23 +8,72 @@
 
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="logo-wrapper">
-        <img class="logo" src="#" width="#" height="#" alt="Логотип">
+        <a class="logo-wrapper" tabindex="0" aria-label="Логотип города Седона">
+        <img class="logo" src="#" width="#" height="#" alt="Логотип Седоны">
         </a>
 
         <ul class="site-navigation">
-          <li><a class="navigation-link" href="info.html">Информация</a></li>
-          <li><a class="navigation-link" href="photo.html">Фото и видео</a></li>
-          <li><a class="navigation-link" href="map.html">Карта штата</a></li>
-          <li><a class="navigation-link" href="hotels.html">Гостиницы</a></li>
+          <li><a class="navigation-link" href="info.html" tabindex="0" aria-label="Информация">Информация</a></li>
+          <li><a class="navigation-link" href="photo.html" tabindex="0" aria-label="Фото и видео">Фото и видео</a></li>
+          <li><a class="navigation-link" href="map.html" tabindex="0" aria-label="Карта штата">Карта штата</a></li>
+          <li><a class="navigation-link" href="hotels.html" tabindex="0" aria-label="Гостиницы">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
       <main class="main-content">
         <article class="form-dates">
-        <!-- Здесь будет форма! Скоро -->
-        </article>
+
+         <form class="checkbox-infrastructure" method="get" action="https://echo.htmlacademy.ru" oninput="price.value=price-count.value">
+          <fieldset class="infrostructure">
+           <legend>Инфраструктура:</legend>
+            <ul>
+             <li>
+              <input type="checkbox" checked name="waterpool" id="waterpool-field">
+              <label for="waterpool-field">Бассейн</label>
+            </li>
+            <li>
+              <input type="checkbox" name="parking" id="parking-field">
+              <label for="parking-field">Парковка</label>
+            </li>
+            <li>
+              <input type="checkbox" name="wifi" id="wifi-field">
+              <label for="wifi-field">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+
+       <fieldset class="type">
+         <legend>Тип жилья:</legend>
+         <ul>
+           <li>
+           <input type="checkbox" checked name="hotel" id="hotel-field">
+           <label for="hotel-field">Гостиница</label>
+         </li>
+         <li>
+           <input type="checkbox" checked name="motel" id="motel-field">
+           <label for="motel-field">Мотель</label>
+         </li>
+         <li>
+           <input type="checkbox" checked name="apartments" id="apartments-field">
+           <label for="apartments-field">Апартаменты</label>
+         </li>
+       </ul>
+    </fieldset>
+
+    <fieldset class="range">
+      <legend class="visually-hidden">Стоимость в сутки (Р): </legend>
+      <label for="price-count">Стоимость в сутки (Р):</label>
+      <div class="price-range">
+        <output name="price"></output>
+      </div>
+       <input type="range" multiple min="0" max="4000" step="1" value="0, 2000">
+       <input type="range" min="0" max="4000" step="1" value="3000">
+    </fieldset>
+
+    </form>
+    <button class="show" type="submit">Показать</button>
+  </article>
 
         <div class="sort">
           <p class="found">Найдено: 3</p>
@@ -43,7 +92,7 @@
     <ul class="hotels-list">
       <li class="hotel-list-item">
         <div class="photo">
-            <a class="go-to-hotel-page"><img class="hotel-pic pic-one" src="img/hotel-img-1.jpg" width="135" height="90" alt="hotel Amara Resort & Spa"></a>
+            <a class="go-to-hotel-page"><img class="hotel-pic pic-one" src="img/hotel-img-1.jpg" width="135" height="90" alt="Фотография hotel Amara Resort & Spa"></a>
         </div>
         <div class="hotel-block">
           <h2 class="name">Amara Resort & Spa</h2>
@@ -67,7 +116,7 @@
 
       <li class="hotel-list-item">
         <div class="photo">
-            <a class="go-to-hotel-page"><img class="hotel-pic pic-two" src="img/hotel-img-2.jpg" width="135" height="90" alt="hotel Desert Quail INN"></a>
+            <a class="go-to-hotel-page"><img class="hotel-pic pic-two" src="img/hotel-img-2.jpg" width="135" height="90" alt="Фотография hotel Desert Quail INN"></a>
         </div>
         <div class="hotel-block">
           <h2 class="name">Desert Quail INN</h2>
@@ -90,7 +139,7 @@
 
       <li class="hotel-list-item">
         <div class="photo">
-            <a class="go-to-hotel-page"><img class="hotel-pic pic-three" src="img/hotel-img-3.jpg" width="135" height="90" alt="hotel Villas At Poco Diablo"></a>
+            <a class="go-to-hotel-page"><img class="hotel-pic pic-three" src="img/hotel-img-3.jpg" width="135" height="90" alt="Фотография hotel Villas At Poco Diablo"></a>
         </div>
         <div class="hotel-block">
           <h2 class="name">Villas At Poco Diablo</h2>
@@ -113,18 +162,18 @@
       </ul>
      </main>
 
-      <footer class="main-footer">
-       <span>#VisitSedona</span>
-        <ul class="footer-social">
-         <li><a class="social-button vk-link" href="#">Вконтакте</a></li>
-         <li><a class="social-button fb-link" href="#">Фейсбук</a></li>
-         <li><a class="social-button insta-link" href="#">Инстаграм</a></li>
-       </ul>
-       <div class="footer-copyright">
-         <p class="made-by">Website by</p>
-         <a class="academy-link" href="https://htmlacademy.ru">HTML Academy</a>
-       </div>
-     </footer>
+     <footer class="main-footer">
+      <span>#VisitSedona</span>
+       <ul class="footer-social">
+        <li><a class="social-button vk-link" href="#" tabindex="0" aria-label="ВКонтакте">Вконтакте</a></li>
+        <li><a class="social-button fb-link" href="#" tabindex="0" aria-label="Фейсбук">Фейсбук</a></li>
+        <li><a class="social-button insta-link" href="#" tabindex="0" aria-label="Инстаграм">Инстаграм</a></li>
+      </ul>
+      <div class="footer-copyright">
+        <p class="made-by">Website by</p>
+        <a class="academy-link" href="https://htmlacademy.ru" tabindex="0" aria-label="HTML Academy">HTML Academy</a>
+      </div>
+    </footer>
 
   </body>
 </html>
