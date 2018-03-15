@@ -22,10 +22,28 @@ a {
   color: #333333;
   background-color: #ffffff;
 }
+
 .main-navigation li,
 .sort-by li {
   display: inline-block;
 }
+
+.logo-wrapper{
+  order: 2;
+}
+
+.site-navigation li {
+align-items: center;
+}
+
+.site-navigation li:nth-child(3) {
+  order: 3;
+}
+
+.site-navigation li:nth-child(4) {
+  order: 4;
+}
+
 .main-navigation,
 .site-navigation,
 .recommend-list,
@@ -45,9 +63,11 @@ a {
 .site-navigation a:hover {
   color: #c0d9e8;
 }
+
 .site-navigation a:focus {
 color: #d7d7d7;
 }
+
 .site-navigation a:active {
 color: #b1a6a0;
 }
@@ -57,35 +77,57 @@ color: #b1a6a0;
  background-color: #81b3d2;
 }
 
+.promo-title h2 {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
 .promo-title h3 {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
+  margin-bottom: 60px;
 }
 
 .promo-title {
   text-align: center;
 }
+
 .recommend-item {
   display: inline-block;
+  padding-top: 60px;
+  padding-bottom: 87px;
 }
+
 .main-reason,
 .describe,
 .symbol,
-.number-sign {
+.number-sign,
+.other-reason-list,
+.recommend-list {
   text-align: center;
 }
+
 .describe,
 .dates,
 .number-sign {
   color: #333333;
 }
+
 .different {
   color: #ffffff;
 }
+
 .other-reason-list {
 background-color: #eeeeee;
+padding-top: 50px;
+padding-bottom: 65px;
 }
+
+.other-reason-list li {
+  margin-right:
+}
+
 .other-reason-list-item {
   display: inline-block;
 }
@@ -96,71 +138,100 @@ background-color: #eeeeee;
   font-weight: 700;
   font-size: 21px;
 }
+
 .other {
   color: #ffffff;
   font-size: 21px;
+}
+
+.interested{
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
 
 .interested h2,
 .dates {
   text-align: center;
 }
+
 .form-dates {
   display: block;
   font-weight: 700;
   margin: 0 auto; // не сработало
 }
+
+.find-h2 {
+width: 570px;
+padding-top: 35px;
+padding-bottom: 35px;
+}
+
 .form-dates h2 {
  color: #ffffff;
  background-color: #766357;
 }
+
 .form-dates h2:hover {
   background-color: #604e43;
 }
+
 .form-dates h2:active {
   color: #857871;
   background-color: #503e33;
 }
+
 .find-hotels {
   color: #ffffff;
   background-color: #81b3d2;
 }
+
 .find-hotels:hover {
   background-color: #669ec0;
 }
+
 .find-hotels:focus {
   color: #88b6d1;
   background-color: #5496bd;
 }
+
 .main-footer {
   display: flex;
 }
+
 .visit {
   font-size: 21px;
   font-weight: 700;
 }
+
 .footer-social {
   display: inline-block;
   text-align: center;
 }
+
 .main-footer a {
   color: #333333;
 }
+
 .footer-copyright {
   text-align: center;
 }
+
 .made-by {
   font-size: 14px; // почему-то не меняется размер шрифта!
 }
+
 .academy-link:hover {
   stroke:#81b3d2; // оба ниже не меняют цвет
   fill: #81b3d2;
 }
+
 .academy-link:focus {
   stroke: #bdbbbc;
   fill: #bdbbbc;
 }
+
   // ВТОРАЯ СТРАНИЦА
+
 .form-field {
   background-color: #263a41;
   background-image: url("img/promo-bg.jpg");
@@ -172,45 +243,58 @@ background-color: #eeeeee;
   display: flex;
   align-items: baseline;
 }
+
 .found {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin-left: 70px;
+  margin-right: 48px;
 }
+
 .sorted,
 .sort-by {
   font-size: 12px;
   line-height: 18px;
 }
+
 .sort-item:active {
   color: #81b3d2;
 }
+
 .sort-item:hover {
   color:#b1b1b1;
   border-bottom: 1px dotted #81b3d2;
 }
+
 .sort-item:focus {
   color: #0a0a0a;
 }
+
 .item-one {
   color: #81b3d2;
 }
-.item-two,
-.item-three {
+
+.sort-item .item-two,
+.sort-item .item-three {
   color:#b1b1b1;
   border-bottom: 1px dotted #81b3d2;
 }
+
 .hotel-block .name {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
 }
+
 .hotel-block .name:hover {
   color: #81b3d2;
 }
+
 .hotel-block .name:focus {
   color: #b2b2b2;
 }
+
 .type-and-price,
 .more-and-reserve,
 .more-and-reserve .reserve,
@@ -219,15 +303,19 @@ background-color: #eeeeee;
   line-height: 21px;
   text-transform: uppercase;
 }
+
 .sort {
   fill: #cacaca;
 }
+
 .sort:active {
   fill: #81b3d2;
 }
+
 .sort:hover {
   fill: #231f20;
 }
+
 .sort:focus {
   fill: #81b3d2;
 }
@@ -236,9 +324,11 @@ background-color: #eeeeee;
   color: #fefefe;
   background-color: #81b3d2;
 }
+
 .more-info:hover {
   background-color: #669ec0;
 }
+
 .more-info:focus {
   color: #88b6d1;
   background-color: #5496bd;
@@ -247,18 +337,30 @@ background-color: #eeeeee;
 .rate {
   background-color: #f2f2f2;
 }
+
 .more-and-reserve .reserve {
   display: block;
   background-color: #766357;
   text-align: center;
 }
+
 .more-and-reserve .reserve:hover {
   background-color: #604e43;
 }
+
 .more-and-reserve .reserve:focus {
   color: #857871;
   background-color: #503e33;
 }
+
 .hotel-list-item {
   display: flex;
+}
+
+.reasons-line {
+  display: flex;
+}
+.reasons-list {
+  min-width: 400px;
+  height: 255px;
 }
