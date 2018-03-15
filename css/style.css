@@ -16,16 +16,24 @@ a {
 }
 
 .main-navigation {
+  display: flex;
   font-size: 14px;
   line-height: 26px;
   color: #333333;
   background-color: #ffffff;
 }
+.main-navigation li,
+.sort-by li {
+  display: inline-block;
+}
 .main-navigation,
 .site-navigation,
 .recommend-list,
 .other-reason-list,
-.footer-social {
+.footer-social,
+.sort-by,
+.sort-signs,
+.hotels-list {
   list-style: none;
 }
 
@@ -50,5 +58,207 @@ color: #b1a6a0;
 }
 
 .promo-title h3 {
+  font-size: 14px;
   font-weight: 400;
+  line-height: 26px;
+}
+
+.promo-title {
+  text-align: center;
+}
+.recommend-item {
+  display: inline-block;
+}
+.main-reason,
+.describe,
+.symbol,
+.number-sign {
+  text-align: center;
+}
+.describe,
+.dates,
+.number-sign {
+  color: #333333;
+}
+.different {
+  color: #ffffff;
+}
+.other-reason-list {
+background-color: #eeeeee;
+}
+.other-reason-list-item {
+  display: inline-block;
+}
+.main-reason,
+.tagline{
+  color: #0a0a0a;
+  line-height: 21px;
+  font-weight: 700;
+  font-size: 21px;
+}
+.other {
+  color: #ffffff;
+  font-size: 21px;
+}
+
+.interested h2,
+.dates {
+  text-align: center;
+}
+.form-dates {
+  display: block;
+  font-weight: 700;
+  margin: 0 auto; // не сработало
+}
+.form-dates h2 {
+ color: #ffffff;
+ background-color: #766357;
+}
+.form-dates h2:hover {
+  background-color: #604e43;
+}
+.form-dates h2:active {
+  color: #857871;
+  background-color: #503e33;
+}
+.find-hotels {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+.find-hotels:hover {
+  background-color: #669ec0;
+}
+.find-hotels:focus {
+  color: #88b6d1;
+  background-color: #5496bd;
+}
+.main-footer {
+  display: flex;
+}
+.visit {
+  font-size: 21px;
+  font-weight: 700;
+}
+.footer-social {
+  display: inline-block;
+  text-align: center;
+}
+.main-footer a {
+  color: #333333;
+}
+.footer-copyright {
+  text-align: center;
+}
+.made-by {
+  font-size: 14px; // почему-то не меняется размер шрифта!
+}
+.academy-link:hover {
+  stroke:#81b3d2; // оба ниже не меняют цвет
+  fill: #81b3d2;
+}
+.academy-link:focus {
+  stroke: #bdbbbc;
+  fill: #bdbbbc;
+}
+  // ВТОРАЯ СТРАНИЦА
+.form-field {
+  background-color: #263a41;
+  background-image: url("img/promo-bg.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.sort {
+  display: flex;
+  align-items: baseline;
+}
+.found {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.sorted,
+.sort-by {
+  font-size: 12px;
+  line-height: 18px;
+}
+.sort-item:active {
+  color: #81b3d2;
+}
+.sort-item:hover {
+  color:#b1b1b1;
+  border-bottom: 1px dotted #81b3d2;
+}
+.sort-item:focus {
+  color: #0a0a0a;
+}
+.item-one {
+  color: #81b3d2;
+}
+.item-two,
+.item-three {
+  color:#b1b1b1;
+  border-bottom: 1px dotted #81b3d2;
+}
+.hotel-block .name {
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+}
+.hotel-block .name:hover {
+  color: #81b3d2;
+}
+.hotel-block .name:focus {
+  color: #b2b2b2;
+}
+.type-and-price,
+.more-and-reserve,
+.more-and-reserve .reserve,
+.rate {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.sort {
+  fill: #cacaca;
+}
+.sort:active {
+  fill: #81b3d2;
+}
+.sort:hover {
+  fill: #231f20;
+}
+.sort:focus {
+  fill: #81b3d2;
+}
+
+.more-info {
+  color: #fefefe;
+  background-color: #81b3d2;
+}
+.more-info:hover {
+  background-color: #669ec0;
+}
+.more-info:focus {
+  color: #88b6d1;
+  background-color: #5496bd;
+}
+
+.rate {
+  background-color: #f2f2f2;
+}
+.more-and-reserve .reserve {
+  display: block;
+  background-color: #766357;
+  text-align: center;
+}
+.more-and-reserve .reserve:hover {
+  background-color: #604e43;
+}
+.more-and-reserve .reserve:focus {
+  color: #857871;
+  background-color: #503e33;
+}
+.hotel-list-item {
+  display: flex;
 }
