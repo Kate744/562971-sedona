@@ -59,7 +59,9 @@ padding: 0;
 .footer-social,
 .sort-by,
 .sort-signs,
-.hotels-list {
+.hotels-list,
+.check-infrastructure,
+.check-type {
   list-style: none;
   margin: 0 auto;
   padding: 0;
@@ -315,7 +317,7 @@ padding-bottom: 65px;
   display: flex;
   flex-wrap: wrap;
   width: 550px;
-justify-content: center;
+  justify-content: center;
 }
 .form-item {
   width: 458px;
@@ -390,28 +392,24 @@ justify-content: center;
 }
 
 
-
-  // ВТОРАЯ СТРАНИЦА
-
 .form-field {
   background-color: #263a41;
-  background-image: url("img/blurred-bg.png");
-  background-position: 0 0;
+  background-image: url("../img/blurred-bg.png");
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
+.part-two {margin-left:  auto;}
 
 .filter-range {
-  width: 330px;
-  margin: 50px auto;
-
+  width: 320px;
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .filter-range-title {
   margin-bottom: 9px;
-
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
@@ -433,18 +431,15 @@ justify-content: center;
   left: 50%;
   width: 2px;
   height: 22px;
-
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
 
 .price-controls label {
   display: inline-block;
-
   font-size: 14px;
   line-height: 38px;
   vertical-align: top;
-
   cursor: pointer;
 }
 
@@ -457,30 +452,25 @@ justify-content: center;
 .price-controls input {
   width: 50px;
   margin: 0;
-
   color: inherit;
   font: inherit;
-
   background: none;
   border: none;
 }
 
 .range-controls {
   position: relative;
-
   margin-bottom: 32px;
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
-
   background: #ffffff;
 }
 
@@ -489,7 +479,6 @@ justify-content: center;
   height: 4px;
   position: absolute;
   top: -9px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -506,7 +495,8 @@ justify-content: center;
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+  width: 6px;
+  height: 6px;
 }
 
 .btn-transparent {
@@ -598,24 +588,25 @@ border-bottom: 1px dotted #81b3d2;
   border-bottom: 1px dotted #81b3d2;
 }
 
-.name {
+.hotel-block .name {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
-  margin-top: -4px;
-  /*margin-bottom: 13px;*/
+  margin-top: -6px;
+  padding-bottom: 5px;
 }
 
-.name:hover {
+.hotel-block .name:hover {
   color: #81b3d2;
 }
 
-.name:focus {
+.hotel-block .name:focus {
   color: #b2b2b2;
 }
 
 .type-and-price,
-.reserve,
+.more-and-reserve,
+.more-and-reserve .reserve,
 .rate {
   font-size: 14px;
   line-height: 21px;
@@ -648,27 +639,32 @@ border-bottom: 1px dotted #81b3d2;
   fill: #231f20;
 }
 
-.sort-signs li:focus {
+.sort-signs li:focus path{
   fill: #81b3d2;
 }
 
-.name {
-  margin-top: -5px;
+.hotel-block h2 {
+  margin: 0;
   padding: 0;
 }
 
 .go-to-hotel-page {
   padding-right: 30px;
-  margin: 0;
 }
 
 .hotel-list-item {
   padding: 31px 71px;
   display: flex;
+  border-top: 1px solid #e5e5e5;
 }
 
 .hotel-list-item li:last-child {
   border-bottom: 1px solid #e5e5e5;
+}
+
+.type-and-price {
+  display: flex;
+  margin-bottom: 8px;
 }
 
 .type,
@@ -677,13 +673,18 @@ border-bottom: 1px dotted #81b3d2;
   margin: 0;
 }
 
+.type {
+  width: 116px;
+}
+
 .more-info {
   color: #fefefe;
   background-color: #81b3d2;
-  padding: 5px 0;
+  padding: 8px 0;
   margin-right: 6px;
   width: 110px;
   text-align: center;
+  width: 110px;
   font-weight: 700;
 }
 
@@ -696,66 +697,125 @@ border-bottom: 1px dotted #81b3d2;
   background-color: #5496bd;
 }
 
-
-.name-and-stars {
-display: flex;
+.stars-and-rating {
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .stars {
   display: flex;
+  justify-content: flex-end;
   padding-left: 5px;
-  margin-left: auto;
-  margin-right: 0;
 }
-.rate-block {
-  padding: 0;
-  margin: 0;
-}
+
 .rate {
   background-color: #f2f2f2;
   width: 110px;
   text-align: center;
-  /*margin-top: auto;
-  margin-bottom: 0;*/
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+.more-and-reserve {
+  display: flex;
+}
+
+.more {
+  text-align: center;
+  width: 110px;
 }
 
 .reserve {
   background-color: #766357;
-  color: #fefefe;
   text-align: center;
+  color: #fefefe;
   font-weight: 700;
-  width: 145px;
+  width: 142px;
   margin: 0 auto;
   padding: 8px 0;
   border: none;
   outline-style: none;
 }
 
-.reserve:hover {
+.more-and-reserve .reserve:hover {
   background-color: #604e43;
 }
 
-.reserve:focus {
+.more-and-reserve .reserve:focus {
   color: #857871;
   background-color: #503e33;
 }
 
-.reserve-and-rate {
-  margin-left: auto;
-  margin-right: 0;
-}
-/*
-.starss {
-  margin-left: auto;
-  margin-right: 0;
-}
-.type-and-more {
-  padding-right: 5px;
-}*/
-.type-and-more,
-.price-and-reserve {
-display: block;
-}
-.container-item {
+/*чекбоксы*/
+.checkbox-block {
   display: flex;
+}
+
+.form-field {
+  padding: 30px 71px;
+  display: flex;
+  padding-bottom: 0;
+}
+
+.form-field fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  padding-right: 120px;
+}
+
+.form-field legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 31px;
+  margin-bottom: 27px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  line-height: 25px;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  position: relative;
+  padding-left: 40px;
+  color: #ffffff;
+  padding-bottom: 23px;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../img/checkbox-off-icon.svg") no-repeat;
+  background-position: 0 0;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../img/checkbox-on-icon.svg") no-repeat;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: #6a6a6a;
 }

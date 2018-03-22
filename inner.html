@@ -12,8 +12,8 @@
     <div class="container">
         <header class="main-header">
           <nav class="main-navigation">
-            <a class="logo-wrapper" tabindex="0">
-            <img class="logo" src="img/logo.png" width="138px" height="70px" alt="Логотип Седоны">
+            <a class="logo-wrapper" href="index.html" tabindex="0">
+            <img class="logo" src="img/logo.png" width="138" height="70" alt="Логотип Седоны">
             </a>
 
             <ul class="site-navigation">
@@ -29,10 +29,10 @@
       <main class="main-content">
         <article class="form-field">
 
-         <form class="checkbox-infrastructure" method="get" action="https://echo.htmlacademy.ru" oninput="price.value=price-count.value">
+         <form class="checkbox-block" method="get" action="https://echo.htmlacademy.ru" oninput="price.value=price-count.value">
           <fieldset class="infrostructure">
            <legend>Инфраструктура:</legend>
-            <ul>
+            <ul class="check-infrastructure">
              <li>
               <input type="checkbox" checked name="waterpool" id="waterpool-field">
               <label for="waterpool-field">Бассейн</label>
@@ -48,9 +48,9 @@
           </ul>
         </fieldset>
 
-       <fieldset class="type">
+       <fieldset class="type-fieldset">
          <legend>Тип жилья:</legend>
-         <ul>
+         <ul class="check-type">
            <li>
            <input type="checkbox" checked name="hotel" id="hotel-field">
            <label for="hotel-field">Гостиница</label>
@@ -66,15 +66,6 @@
        </ul>
     </fieldset>
 
-    <!---<fieldset class="range">
-      <legend class="visually-hidden">Стоимость в сутки (Р): </legend>
-      <label for="price-count">Стоимость в сутки (Р):</label>
-      <div class="price-range">
-        <output name="price"></output>
-      </div>
-       <input type="range" multiple min="0" max="4000" step="1" value="0, 2000">
-       <input type="range" min="0" max="4000" step="1" value="3000">
-    </fieldset> -->
     <div class="part-two">
     <div class="filter-range">
       <div class="filter-range-title">Стоимость в сутки (р):</div>
@@ -95,16 +86,16 @@
 
     </form>
   </div>
-    <!--<button class="show" type="submit">Показать</button>-->
+
   </article>
 
         <div class="sort">
           <p class="found">Найдено: 3</p>
           <p class="sorted">Сортировка: </p>
           <ul class="sort-by">
-            <li class="sort-item item-one"><a href="#">По цене</a></li>
-            <li class="sort-item item-two"><a href="#">По типу</a></li>
-            <li class="sort-item item-three"><a href="#">По рейтингу</a></li>
+            <li class="sort-item item-one"><a tabindex="0" href="#">По цене</a></li>
+            <li class="sort-item item-two"><a tabindex="0" href="#">По типу</a></li>
+            <li class="sort-item item-three"><a tabindex="0" href="#">По рейтингу</a></li>
           </ul>
           <ul class="sort-signs">
             <li class="sort sort-up"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#cacaca" d="M5.5 0L0 10h11z"/></svg></a></li>
@@ -117,34 +108,30 @@
 
       <li class="hotel-list-item">
         <div class="photo">
-            <a class="go-to-hotel-page"><img class="hotel-pic pic-one" src="img/hotel-img-1.jpg" width="135" height="" alt="Фотография hotel Amara Resort & Spa"></a>
+            <a class="go-to-hotel-page"><img class="hotel-pic pic-two" src="img/hotel-img-2.jpg" width="135" height="90" alt="Фотография hotel Desert Quail INN"></a>
         </div>
-
-        <div class="name-and-stars">
+        <div class="hotel-block">
           <a href="#"><h2 class="name">Amara Resort & Spa</h2></a>
-            <div class="stars">
-              <span class="star"><img src="img/star-icon.svg"></img></span>
-              <span class="star"><img src="img/star-icon.svg"></img></span>
-              <span class="star"><img src="img/star-icon.svg"></img></span>
-              <span class="star"><img src="img/star-icon.svg"></img></span>
-            </div>
-        </div>
-
-        <div class="container-item">
-          <div class="type-and-more">
+          <div class="type-and-price">
             <p class="type">Гостиница</p>
-            <a class="more-info">Подробнее</a>
-          </div>
-          <div class="price-and-reserve">
             <p class="price">От 4000 р.</p>
+          </div>
+          <div class="more-and-reserve">
+            <a class="more-info" tabindex="0">Подробнее</a>
             <button class="reserve">Забронировать</button>
           </div>
-          <div class="rate-block">
-          <p class="rate">Рейтинг: 8,5</p>
-          </div>
         </div>
-
+        <div class="stars-and-rating">
+          <div class="stars">
+            <span class="stars"><img src="img/star-icon.svg"></img></span>
+            <span class="stars"><img src="img/star-icon.svg"></img></span>
+            <span class="stars"><img src="img/star-icon.svg"></img></span>
+            <span class="stars"><img src="img/star-icon.svg"></img></span>
+          </div>
+          <p class="rate">Рейтинг: 8,5</p>
+        </div>
       </li>
+
 
       <li class="hotel-list-item">
         <div class="photo">
@@ -157,7 +144,7 @@
             <p class="price">От 3000 р.</p>
           </div>
           <div class="more-and-reserve">
-            <a class="more-info">Подробнее</a>
+            <a class="more-info" tabindex="0">Подробнее</a>
             <button class="reserve">Забронировать</button>
           </div>
         </div>
@@ -182,7 +169,7 @@
             <p class="price">От 2000 р.</p>
           </div>
           <div class="more-and-reserve">
-            <a class="more-info">Подробнее</a>
+            <a class="more-info" tabindex="0">Подробнее</a>
             <button class="reserve">Забронировать</button>
           </div>
         </div>
