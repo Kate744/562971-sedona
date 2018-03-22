@@ -21,16 +21,13 @@ a {
   text-decoration: none;
   display: block;
   padding: 0;
+  color: inherit;
 }
 
 .main-navigation {
   display: flex;
   color: #333333;
   background-color: #ffffff;
-}
-
-.site-navigation li:active {
-  color: #766357;
 }
 
 .logo-wrapper {
@@ -49,6 +46,10 @@ a {
 
 .site-navigation li {
 padding: 0;
+}
+
+.site-navigation li .active {
+  color: #766357;
 }
 
 .main-navigation,
@@ -249,32 +250,28 @@ padding-bottom: 65px;
   text-align: center;
 }
 
-.form-dates {
+.find-h2 {
   display: block;
   font-weight: 700;
-  margin: 0 auto; // не сработало
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 0 0;
+  text-align: center;
+  border: none;
+  outline-style: none;
 }
 
 .find-h2 h2 {
-padding: 35px 139px;
-
-}
-.find-h2 {
-text-transform: uppercase;
-padding: 0 0;
-text-align: center;
-
-}
-.form-dates h2 {
  color: #ffffff;
+ padding: 35px 139px;
  background-color: #766357;
 }
 
-.form-dates h2:hover {
+.find-h2 h2:hover {
   background-color: #604e43;
 }
 
-.form-dates h2:active {
+.find-h2 h2:active {
   color: #857871;
   background-color: #503e33;
 }
@@ -314,6 +311,22 @@ text-align: center;
   align-items: center;
 }
 
+.form-dates {
+  display: flex;
+  flex-wrap: wrap;
+  width: 550px;
+justify-content: center;
+}
+.form-item {
+  width: 458px;
+}
+.form-item input {
+  width: 316px;
+}
+.guests input{
+  width: 40px;
+  flex-wrap: nowrap;
+}
 .footer-social {
   display: flex;
   text-align: center;
@@ -382,9 +395,140 @@ text-align: center;
 
 .form-field {
   background-color: #263a41;
-  background-image: url("img/promo-bg.jpg");
+  background-image: url("img/blurred-bg.png");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+
+.filter-range {
+  width: 330px;
+  margin: 50px auto;
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: -9px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 .sort {
@@ -454,25 +598,24 @@ border-bottom: 1px dotted #81b3d2;
   border-bottom: 1px dotted #81b3d2;
 }
 
-.hotel-block .name {
+.name {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
   margin-top: -4px;
-  margin-bottom: 13px;
+  /*margin-bottom: 13px;*/
 }
 
-.hotel-block .name:hover {
+.name:hover {
   color: #81b3d2;
 }
 
-.hotel-block .name:focus {
+.name:focus {
   color: #b2b2b2;
 }
 
 .type-and-price,
-.more-and-reserve,
-.more-and-reserve .reserve,
+.reserve,
 .rate {
   font-size: 14px;
   line-height: 21px;
@@ -494,11 +637,14 @@ border-bottom: 1px dotted #81b3d2;
   padding-left: 5px;
   fill: #b1b1b1;
 }
-.sort-signs li:active {
+.sort-signs li:active path{
+  fill: #81b3d2;
+}
+.sort-signs .active path{
   fill: #81b3d2;
 }
 
-.sort-signs li:hover {
+.sort-signs li:hover path {
   fill: #231f20;
 }
 
@@ -506,47 +652,41 @@ border-bottom: 1px dotted #81b3d2;
   fill: #81b3d2;
 }
 
-.hotels-block {
-  /*margin-left: 70px;
-  margin-right: 72px;*/
-}
-
-.hotel-block h2 {
-  margin: 0;
+.name {
+  margin-top: -5px;
   padding: 0;
 }
+
 .go-to-hotel-page {
   padding-right: 30px;
+  margin: 0;
 }
+
 .hotel-list-item {
   padding: 31px 71px;
   display: flex;
-  border-top: 1px solid #e5e5e5;
 }
 
 .hotel-list-item li:last-child {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.type-and-price {
-  display: flex;
-  margin-bottom: 13px;
-}
 .type,
 .price {
   padding: 0;
   margin: 0;
 }
+
 .more-info {
   color: #fefefe;
   background-color: #81b3d2;
-  padding: 0 17px;
+  padding: 5px 0;
   margin-right: 6px;
+  width: 110px;
+  text-align: center;
+  font-weight: 700;
 }
 
-.add {
-  display: block;
-}
 .more-info:hover {
   background-color: #669ec0;
 }
@@ -556,41 +696,66 @@ border-bottom: 1px dotted #81b3d2;
   background-color: #5496bd;
 }
 
+
+.name-and-stars {
+display: flex;
+}
+
 .stars {
   display: flex;
-  justify-content: flex-end;
   padding-left: 5px;
+  margin-left: auto;
+  margin-right: 0;
+}
+.rate-block {
+  padding: 0;
+  margin: 0;
 }
 .rate {
   background-color: #f2f2f2;
   width: 110px;
   text-align: center;
+  /*margin-top: auto;
+  margin-bottom: 0;*/
 }
 
-.more-and-reserve {
-  display: flex;
-}
-
-.more-and-reserve .more {
-  text-align: center;
-  width: 110px;
-}
-.more-and-reserve .reserve {
+.reserve {
   background-color: #766357;
+  color: #fefefe;
   text-align: center;
-  width: 148px;
+  font-weight: 700;
+  width: 145px;
+  margin: 0 auto;
+  padding: 8px 0;
+  border: none;
+  outline-style: none;
 }
 
-.more-and-reserve .reserve:hover {
+.reserve:hover {
   background-color: #604e43;
 }
 
-.more-and-reserve .reserve:focus {
+.reserve:focus {
   color: #857871;
   background-color: #503e33;
 }
 
-.stars-and-rating {
+.reserve-and-rate {
   margin-left: auto;
   margin-right: 0;
+}
+/*
+.starss {
+  margin-left: auto;
+  margin-right: 0;
+}
+.type-and-more {
+  padding-right: 5px;
+}*/
+.type-and-more,
+.price-and-reserve {
+display: block;
+}
+.container-item {
+  display: flex;
 }

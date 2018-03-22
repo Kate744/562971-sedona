@@ -21,7 +21,7 @@
           <li><a class="navigation-link" href="photo.html" tabindex="0" aria-label="Фото и видео">Фото и видео</a></li>
           <li><a class="hid" href="#"></a></li>
           <li><a class="navigation-link" href="map.html" tabindex="0" aria-label="Карта штата">Карта штата</a></li>
-          <li><a class="navigation-link" href="hotels.html" tabindex="0" aria-label="Гостиницы">Гостиницы</a></li>
+          <li><a class="navigation-link" href="inner.html" tabindex="0" aria-label="Гостиницы">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -103,20 +103,25 @@
             <h2>Заинтересовались?</h2>
             <p class="dates">Укажите предполагаемые даты поездки,<br> и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
           </div>
+          <button class="find-h2"><h2>Поиск гостиницы в Седоне</h2></button>
           <div class="wr-map">
             <img class="map" src="img/map.jpg" width="1200" height="" alt="Карта города Седона">
           </div>
-      <article class="form-dates">
-        <button class="find-h2"><h2>Поиск гостиницы в Седоне</h2></button>
-        <form class="form-dates" action="https://echo.htmlacademy.ru" method="post">
 
+
+        <article class="form-dates">
+        <form class="form-dates" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form-item">
           <label for="date-in">Дата заезда:</label>
             <input type="date" name="date" id="date-in" value="" placeholder="24 апреля 2017">
-
+          </div>
+          <div class="form-item">
           <label for="date-out">Дата выезда:</label>
             <input type="date" name="date" id="date-out" value="" placeholder="4 июля 2017">
-
+          </div>
           <fieldset>
+
+            <div class="part-guests">
             <div class="guests guests-adult">
           <label for="guests-adult">Взрослые:</label>
             <button class="button form-dates-button form-dates-button-less" type="button">-</button>
@@ -130,11 +135,12 @@
             <input type="number" name="guests" id="guests-children" value="" placeholder="0">
             <button class="button form-dates-button form-dates-button-more" type="button">+</button>
           </div>
+        </div>
           </fieldset>
 
         </form>
+        </article>
         <a class="find-hotels" href="#" tabindex="0" aria-label="Найти гостиницы">Найти</a>
-      </article>
       </section>
      </main>
 
