@@ -38,8 +38,6 @@
           <h3 class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h3>
         </div>
 
-        <div class="figure"><img src="img/shape.png"></img></div>
-
         <div class="reasons-line one">
         <div class="reasons-list main">
             <h4 class="main-reason other">Настоящий городок</h4>
@@ -104,43 +102,51 @@
             <p class="dates">Укажите предполагаемые даты поездки,<br> и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
           </div>
           <button class="find-h2"><h2>Поиск гостиницы в Седоне</h2></button>
-          <div class="wr-map">
+          <!--<div class="wr-map">
             <img class="map" src="img/map.jpg" width="1200" height="100%" alt="Карта города Седона">
-          </div>
+          </div>-->
+
+        <div class="overlay">
+        <article class="form-dates modal">
 
 
-        <article class="form-dates">
         <form class="form-dates" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-item">
           <label for="date-in">Дата заезда:</label>
-            <input type="date" name="date" id="date-in" value="" placeholder="24 апреля 2017">
+            <input type="date" class="date-in-field-input" name="date" id="date-in" value="" placeholder="24 апреля 2017">
           </div>
           <div class="form-item">
           <label for="date-out">Дата выезда:</label>
-            <input type="date" name="date" id="date-out" value="" placeholder="4 июля 2017">
+            <input type="date" class="date-out-field-input" name="date" id="date-out" value="" placeholder="4 июля 2017">
           </div>
-          <fieldset>
 
+          <fieldset class="guests-form">
             <div class="part-guests">
-            <div class="guests guests-adult">
-          <label for="guests-adult">Взрослые:</label>
-            <button class="button form-dates-button form-dates-button-less" type="button">-</button>
-            <input type="number" name="guests" id="guests-adult" value="" placeholder="2">
-            <button class="button form-dates-button form-dates-button-more" type="button">+</button>
-          </div>
+              <div class="guests guests-adult">
+            <label for="guests-adult">Взрослые:</label>
+            <div class="btn-new"></div>
+              <button class="button form-dates-button form-dates-button-less hid" type="button">-</button>
+              <input type="number" name="guests" id="guests-adult" value="" placeholder="2">
+              <button class="button form-dates-button form-dates-button-more hid" type="button">+</button>
+            </div>
 
-          <div class="guests guests-child">
-          <label for="guests-children">Дети:</label>
-            <button class="button form-dates-button form-dates-button-less" type="button">-</button>
-            <input type="number" name="guests" id="guests-children" value="" placeholder="0">
-            <button class="button form-dates-button form-dates-button-more" type="button">+</button>
-          </div>
+            <div class="guests guests-child">
+            <label for="guests-children">Дети:</label>
+              <div class="btn-new"></div>
+              <button class="button form-dates-button form-dates-button-less hid" type="button">-</button>
+              <input type="number" name="guests" id="guests-children" value="" placeholder="0">
+              <button class="button form-dates-button form-dates-button-more hid" type="button">+</button>
+            </div>
         </div>
           </fieldset>
 
         </form>
-        </article>
         <a class="find-hotels" href="#" tabindex="0" aria-label="Найти гостиницы">Найти</a>
+
+
+        </article>
+      </div>
+
       </section>
      </main>
 

@@ -103,9 +103,18 @@ img {
   justify-content: center;
 }
 
+.main-pic::after {
+   content: "";
+   position: relative;
+   background-image: url("../img/shape.png");
+   height: 60px;
+   left: 0;
+   bottom: 0;
+}
+
 .font {
-  padding-top: 125px;
-  padding-bottom: 80px;
+  padding-top: 130px;
+  padding-bottom: 75px;
   margin: 0 auto;
 }
 
@@ -261,6 +270,7 @@ padding-bottom: 65px;
   text-align: center;
   border: none;
   outline-style: none;
+  width: 568px;
 }
 
 .find-h2 h2 {
@@ -398,9 +408,14 @@ padding-bottom: 65px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.part-two {margin-left:  auto;}
+.part-two {
+  display: flex;
+  margin-left: auto;
+}
 
 .filter-range {
   width: 320px;
@@ -758,6 +773,8 @@ border-bottom: 1px dotted #81b3d2;
   padding: 30px 71px;
   display: flex;
   padding-bottom: 0;
+  display:  flex;
+  justify-content: flex-start;
 }
 
 .form-field fieldset {
@@ -818,4 +835,124 @@ input[type="checkbox"]:checked + label::after {
 
 input[type="checkbox"]:disabled + label {
   color: #6a6a6a;
+}
+
+.modal {
+  color: #111111;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  width: 568px;
+  margin: 0 auto;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  margin-bottom: 78px;
+}
+
+.overlay {
+  background-color: #263a41;
+  background-image: url("../img/map.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 1200px;
+  height: 100%;
+}
+
+input[type="date"],
+input[type="number"] {
+ background-color: #f2f2f2;
+ border: none;
+ box-sizing: border-box;
+ height: 38px;
+ outline: none;
+}
+
+input[type="date"] {
+  display: inline-block;
+  width: 346px;
+  font-size: 0;
+  width: 346px;
+  height: 38px;
+}
+
+input[type="number"] {
+  width: 38px;
+  text-align: right;
+  font-weight: 700;
+  color: #202020;
+}
+
+.guests-form {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.guests {
+  display: flex;
+  margin: 0;
+}
+
+.part-guests {
+  padding-bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.form-dates {
+  display: flex;
+}
+.guests-adult {
+  padding-right: 65px;
+}
+.form-item {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-item label {
+  padding: 0;
+  vertical-align: middle;
+  font-weight: 700;
+  width: 115px;
+  padding-top: 5px;
+}
+
+.guests label {
+  font-weight: 700;
+  width: 113px;
+}
+
+.date-in-field-input,
+.date-out-field-input {
+  background-image: url("../img/calendar-icon.svg");
+  background-position: 315px center;
+  background-repeat: no-repeat;
+}
+
+.btn-new {
+  position: absolute;
+  top: 191px;
+  right: 377px;
+  width: 38px;
+  height: 38px;
+  font-size: 0;
+  background-color: #f2f2f2;
+  border: 0;
+
+  cursor: pointer;
+}
+.btn-new::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    top: 18px;
+    right: 10px;
+    background-color: #a9a9a9;
+
 }
