@@ -101,6 +101,7 @@ img {
   background-size: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .main-pic::after {
@@ -108,8 +109,8 @@ img {
    position: absolute;
    background-image: url("../img/shape.png");
    height: 60px;
-   left: 191px;
-   bottom: -180px;
+   left: 0;
+   bottom: -3px;
    width: 100%;
    background-repeat:  no-repeat;
    /* margin:  0 auto; */
