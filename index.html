@@ -107,18 +107,20 @@
             <img class="map" src="img/map.jpg" width="1200" height="100%" alt="Карта города Седона">
           </div>-->
 
-        <div class="overlay">
-        <article class="form-dates modal">
+        <div class="overlay map">
+
+        <!--<iframe src="https://www.google.ru/maps/place/Седона,+Аризона+86336,+США/data=!4m2!3m1!1s0x872da132f942b00d:0x5548c523fa6c8efd?sa=X&ved=0ahUKEwjzxvajh4vaAhXHd5oKHQqIDrsQ8gEIJjAA" width="1200" height="400" allowfullscreen></iframe> -->
+        <article class="form-dates modal hid">
 
 
         <form class="form-dates" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-item">
           <label for="date-in">Дата заезда:</label>
-            <input type="date" class="date-in-field-input" name="date" id="date-in" value="" placeholder="24 апреля 2017">
+            <input type="text" class="date-in-field-input" required name="date" id="date-in" value="" placeholder="24 апреля 2017">
           </div>
           <div class="form-item">
           <label for="date-out">Дата выезда:</label>
-            <input type="date" class="date-out-field-input" name="date" id="date-out" value="" placeholder="4 июля 2017">
+            <input type="text" class="date-out-field-input" required name="date" id="date-out" value="" placeholder="4 июля 2017">
           </div>
 
           <fieldset class="guests-form">
@@ -127,7 +129,7 @@
             <label for="guests-adult">Взрослые:</label>
 
               <button class="button form-dates-button form-dates-button-less-adult" type="button">-</button>
-              <input type="number" class="input-adult" name="guests" id="guests-adult" value="" placeholder="2">
+              <input type="number" class="input-adult" required name="guests" id="guests-adult" value="" placeholder="2">
 
               <button class="button form-dates-button form-dates-button-more-adult" type="button">+</button>
             </div>
@@ -136,7 +138,7 @@
             <label for="guests-children">Дети:</label>
 
               <button class="button form-dates-button form-dates-button-less-child" type="button">-</button>
-              <input type="number" class="input-child" name="guests" id="guests-children" value="" placeholder="0">
+              <input type="number" class="input-child" required name="guests" id="guests-children" value="" placeholder="0">
               <button class="button form-dates-button form-dates-button-more-child" type="button">+</button>
             </div>
         </div>
@@ -174,5 +176,6 @@
      </footer>
 
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
