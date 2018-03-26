@@ -1,7 +1,7 @@
 'use strict';
 
 var link = document.querySelector(".find-hotel");
-var modal = document.querySelector(".modal");
+var modal = document.querySelector(".form-dates");
 var form = modal.querySelector("form");
 var dates = modal.querySelector("[type=text]");
 var people = modal.querySelector("[type=number]");
