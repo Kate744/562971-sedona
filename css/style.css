@@ -105,23 +105,20 @@ img {
 
 .main-pic::after {
    content: "";
-   position: relative;
+   position: absolute;
    background-image: url("../img/shape.png");
    height: 60px;
-   left: 0;
-   bottom: 0;
+   left: 191px;
+   bottom: -180px;
+   width: 100%;
+   background-repeat:  no-repeat;
+   /* margin:  0 auto; */
 }
 
 .font {
   padding-top: 130px;
   padding-bottom: 75px;
   margin: 0 auto;
-}
-
-.figure {
-  position: absolute;
-  top: 555px;
-  left: 244px;
 }
 
 .reasons-list {
@@ -261,8 +258,9 @@ padding-bottom: 65px;
   text-align: center;
 }
 
-.find-h2 {
+.find-hotel {
   display: block;
+  font-size: 21px;
   font-weight: 700;
   margin: 0 auto;
   text-transform: uppercase;
@@ -273,17 +271,17 @@ padding-bottom: 65px;
   width: 568px;
 }
 
-.find-h2 h2 {
+.find-hotel {
  color: #ffffff;
  padding: 35px 139px;
  background-color: #766357;
 }
 
-.find-h2 h2:hover {
+.find-hotel:hover {
   background-color: #604e43;
 }
 
-.find-h2 h2:active {
+.find-hotel:active {
   color: #857871;
   background-color: #503e33;
 }
@@ -329,16 +327,20 @@ padding-bottom: 65px;
   width: 550px;
   justify-content: center;
 }
+
 .form-item {
   width: 458px;
 }
+
 .form-item input {
   width: 316px;
 }
+
 .guests input{
   width: 40px;
   flex-wrap: nowrap;
 }
+
 .footer-social {
   display: flex;
   text-align: center;
@@ -346,7 +348,6 @@ padding-bottom: 65px;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
-
 }
 
 .social-button {
@@ -401,7 +402,6 @@ padding-bottom: 65px;
   margin-right: 5px;
 }
 
-
 .form-field {
   background-color: #263a41;
   background-image: url("../img/blurred-bg.png");
@@ -414,13 +414,14 @@ padding-bottom: 65px;
 
 .part-two {
   display: flex;
-  margin-left: auto;
+  width: 100%;
 }
 
 .filter-range {
   width: 320px;
   color: #ffffff;
   text-transform: uppercase;
+  margin-left: 180px;
 }
 
 .filter-range-title {
@@ -532,7 +533,6 @@ padding-bottom: 65px;
 
 .btn-transparent:hover {
   color: #000000;
-
   background: #ffffff;
 }
 
@@ -555,11 +555,13 @@ padding-bottom: 65px;
   padding: 0;
   padding-right: 39px;
 }
+
 .sort-by {
   padding: 0;
   margin: 0;
   display: flex;
 }
+
 .sort-by li {
 margin-right: 33px;
 }
@@ -637,15 +639,18 @@ border-bottom: 1px dotted #81b3d2;
   margin-left: auto;
   margin-right: 0;
 }
+
 .sort-signs li {
   margin-left: auto;
   margin-right: 0;
   padding-left: 5px;
   fill: #b1b1b1;
 }
+
 .sort-signs li:active path{
   fill: #81b3d2;
 }
+
 .sort-signs .active path{
   fill: #81b3d2;
 }
@@ -767,6 +772,7 @@ border-bottom: 1px dotted #81b3d2;
 /*чекбоксы*/
 .checkbox-block {
   display: flex;
+  width: 100%;
 }
 
 .form-field {
@@ -883,6 +889,16 @@ input[type="number"] {
   color: #202020;
 }
 
+.input-adult {
+  position: absolute;
+  left: 208px;
+}
+
+.input-child {
+ position: relative;
+ right: -12px;
+}
+
 .guests-form {
   border: none;
   padding: 0;
@@ -892,22 +908,26 @@ input[type="number"] {
 
 .guests {
   display: flex;
-  margin: 0;
+  align-items: center;
+  width: 285px;
 }
 
 .part-guests {
   padding-bottom: 55px;
   display: flex;
-  justify-content: space-between;
-
+  justify-content: center;
+  width: 458px;
 }
 
 .form-dates {
   display: flex;
 }
-.guests-adult {
-  padding-right: 65px;
+
+.guests-adult label{
+ /* margin-left: 0; */
+ padding-right: 180px;
 }
+
 .form-item {
   padding-bottom: 30px;
   display: flex;
@@ -924,7 +944,7 @@ input[type="number"] {
 
 .guests label {
   font-weight: 700;
-  width: 113px;
+  width: 95px;
 }
 
 .date-in-field-input,
@@ -934,25 +954,107 @@ input[type="number"] {
   background-repeat: no-repeat;
 }
 
-.btn-new {
+.form-dates-button-less-adult {
   position: absolute;
   top: 191px;
-  right: 377px;
+  right: 360px;
   width: 38px;
   height: 38px;
   font-size: 0;
   background-color: #f2f2f2;
   border: 0;
-
   cursor: pointer;
 }
-.btn-new::after {
+
+.form-dates-button-less-adult::after {
     content: "";
     position: absolute;
     width: 12px;
     height: 3px;
     top: 18px;
-    right: 10px;
+    right: 13px;
     background-color: #a9a9a9;
+}
 
+.form-dates-button-more-adult {
+  position: absolute;
+  top: 191px;
+  right: 284px;
+  width: 38px;
+  height: 38px;
+  font-size: 0;
+  background-color: #f2f2f2;
+  border: 0;
+  cursor: pointer;
+}
+
+.form-dates-button-more-adult::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 18px;
+  right: 15px;
+  background-color: #a9a9a9;
+}
+.form-dates-button-more-adult::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 18px;
+  right: 15px;
+  transform: rotate(90deg);
+  background-color: #a9a9a9;
+}
+
+.form-dates-button-less-child {
+  position: absolute;
+  top: 191px;
+  right: 130px;
+  width: 38px;
+  height: 38px;
+  font-size: 0;
+  background-color: #f2f2f2;
+  border: 0;
+  cursor: pointer;
+}
+.form-dates-button-less-child::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 18px;
+  right: 10px;
+  background-color: #a9a9a9;
+}
+.form-dates-button-more-child {
+  position: absolute;
+  top: 191px;
+  right: 55px;
+  width: 38px;
+  height: 38px;
+  font-size: 0;
+  background-color: #f2f2f2;
+  border: 0;
+  cursor: pointer;
+}
+.form-dates-button-more-child::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 18px;
+  right: 12px;
+  background-color: #a9a9a9;
+}
+.form-dates-button-more-child::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 18px;
+  right: 12px;
+  transform: rotate(90deg);
+  background-color: #a9a9a9;
 }

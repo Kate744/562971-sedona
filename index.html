@@ -102,7 +102,7 @@
             <h2>Заинтересовались?</h2>
             <p class="dates">Укажите предполагаемые даты поездки,<br> и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
           </div>
-          <button class="find-h2"><h2>Поиск гостиницы в Седоне</h2></button>
+          <button class="find-hotel">Поиск гостиницы в Седоне</button>
           <!--<div class="wr-map">
             <img class="map" src="img/map.jpg" width="1200" height="100%" alt="Карта города Седона">
           </div>-->
@@ -125,18 +125,19 @@
             <div class="part-guests">
               <div class="guests guests-adult">
             <label for="guests-adult">Взрослые:</label>
-            <div class="btn-new"></div>
-              <button class="button form-dates-button form-dates-button-less hid" type="button">-</button>
-              <input type="number" name="guests" id="guests-adult" value="" placeholder="2">
-              <button class="button form-dates-button form-dates-button-more hid" type="button">+</button>
+
+              <button class="button form-dates-button form-dates-button-less-adult" type="button">-</button>
+              <input type="number" class="input-adult" name="guests" id="guests-adult" value="" placeholder="2">
+
+              <button class="button form-dates-button form-dates-button-more-adult" type="button">+</button>
             </div>
 
             <div class="guests guests-child">
             <label for="guests-children">Дети:</label>
-              <div class="btn-new"></div>
-              <button class="button form-dates-button form-dates-button-less hid" type="button">-</button>
-              <input type="number" name="guests" id="guests-children" value="" placeholder="0">
-              <button class="button form-dates-button form-dates-button-more hid" type="button">+</button>
+
+              <button class="button form-dates-button form-dates-button-less-child" type="button">-</button>
+              <input type="number" class="input-child" name="guests" id="guests-children" value="" placeholder="0">
+              <button class="button form-dates-button form-dates-button-more-child" type="button">+</button>
             </div>
         </div>
           </fieldset>
