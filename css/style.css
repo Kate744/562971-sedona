@@ -878,8 +878,7 @@ input[type="checkbox"]:disabled + label {
   background-size: 100%;
   width: 1200px;
   height: 470px;
-  z-index: 1;
-
+  z-index: 3;
 }
 
 .date-in-field-input,
@@ -973,13 +972,7 @@ input[type="number"] {
   width: 95px;
 }
 
-.date-in-field-input,
-.date-out-field-input {
-  background-image: url("../img/calendar-icon.svg");
-  background-position: 315px center;
-  background-repeat: no-repeat;
-  width: 346px;
-}
+
 
 .date-in-field-input:hover,
 .date-out-field-input:hover {
@@ -1116,10 +1109,21 @@ input[type="number"] {
   color: #81b3d2;
 }
 
+.date-in-field-input,
+.date-out-field-input {
+  background-image: url("../img/calendar-icon.svg");
+  background-position: 315px center;
+  background-repeat: no-repeat;
+  width: 346px;
+}
+
 .modal-show {
   display: flex;
   animation: bounce 0.9s;
+
 }
+
+
 
 .modal-error {
   animation: shake 0.8s;
@@ -1127,19 +1131,19 @@ input[type="number"] {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-5000px);
+    transform: translateY(-3000px);
   }
 
   70% {
-    transform: translateY(-10px);
+    transform: translateY(50px);
   }
 
   90% {
-    transform: translateY(-30px);
+    transform: translateY(-15px);
   }
 
   100% {
-    transform: translateY(-2000px);
+    transform: translateY(0);
   }
 }
 
@@ -1165,6 +1169,14 @@ input[type="number"] {
   }
 }
 
+.info {
+position: relative;
+}
+.modal {
+position: absolute;
+bottom: -13px;
+left: 315px;
+}
 
 .map iframe {
   position: relative;
