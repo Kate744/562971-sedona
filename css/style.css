@@ -44,6 +44,11 @@ a
     background-color: #fff;
 }
 
+.logo
+{
+  width: 138px;
+  height: 70px;
+}
 .logo-wrapper
 {
     position: absolute;
@@ -127,6 +132,7 @@ a
 img
 {
     max-width: 100%;
+    /* width: 800px; */
 }
 
 .main-pic
@@ -139,6 +145,7 @@ img
     background-size: 100%;
 
     justify-content: center;
+
 }
 
 .main-pic::after
@@ -161,6 +168,8 @@ img
     margin: 0 auto;
     padding-top: 130px;
     padding-bottom: 75px;
+    width: 458px;
+
 }
 
 .tagline
@@ -277,7 +286,10 @@ img
 
 .symbol
 {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto;
 }
 
 .different
@@ -831,6 +843,11 @@ img
     background-color: #fff;
 }
 
+.hotel-pic
+{
+    width: 135px;
+    height: 90px;
+}
 .hotel-block .name
 {
     font-size: 21px;
@@ -941,8 +958,7 @@ img
 .type-and-price
 {
     display: flex;
-
-    margin-bottom: 8px;
+    padding-bottom: 8px;
 }
 
 .type,
@@ -990,6 +1006,7 @@ img
 
     margin-right: 0;
     margin-left: auto;
+    width: 110px;
 
     justify-content: space-between;
 }
@@ -1005,20 +1022,37 @@ img
 
 .rate
 {
-    width: 110px;
-    margin-bottom: 5px;
-    padding: 0;
-
-    text-align: center;
-
-    background-color: #f2f2f2;
+  width: 110px;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: center;
+  background-color: #f2f2f2;
+  /* padding-top:  8px; */
+  /* padding-bottom:  8px; */
+  /* padding-left: 15px; */
+  padding: 5px 0;
 }
-
+/*{
+    width: 110px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding-left: 15px;
+    padding-right:  15px;
+    margin: 0;
+    margin-left: auto;
+}
+*/
 .more-and-reserve
 {
     display: flex;
 }
 
+.hotel-block
+{
+  width: 265px;
+}
 .more
 {
     width: 110px;
@@ -1209,14 +1243,14 @@ input[type='number']
 
     border: 2px solid #f2f2f2;
 }
-
-input[type='text']:hover
+.date-in-field-input:hover,
+.date-out-field-input:hover
 {
     background-color: #ebebeb;
     background-image: url('../img/calendar-icon-black.svg');
 }
-
-input[type='text']:focus
+.date-in-field-input:focus,
+.date-out-field-input:focus
 {
     background-color: #fff;
     background-image: url('../img/calendar-icon-blue.svg');
