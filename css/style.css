@@ -1,3 +1,18 @@
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
 body
 {
     font-family: 'PT Sans', Arial, sans-serif;
@@ -165,6 +180,7 @@ img
 
     display: flex;
 
+    background-color: #85b6d4;
     background-image: url('../img/promo-bg.jpg');
     background-size: 100%;
 
@@ -245,7 +261,9 @@ img
     display: -ms-flexbox;
     display: flex;
 
-    height: 255px;
+    padding:0;
+    margin: 0;
+    min-height: 255px;
 }
 
 .promo-title h2
@@ -258,6 +276,8 @@ img
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
+    width: 493px;
+    margin: 0 auto;
 }
 
 .promo-title
@@ -270,6 +290,12 @@ img
     background-color: #fff;
 }
 
+.pic-one,
+.pic-two
+{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .recommend-item
 {
     display: inline-block;
@@ -277,6 +303,7 @@ img
     width: 33%;
     padding-top: 60px;
     padding-bottom: 87px;
+    vertical-align: middle;
 }
 
 .recommend-item li:last-child
@@ -365,6 +392,7 @@ img
 .other-reason-list-item
 {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .other-reason-list .describe
@@ -1385,6 +1413,7 @@ input[type='number']
     border: none;
     outline: none;
     background-color: #f2f2f2;
+    vertical-align: middle;
 }
 
 .date-in-field-input,
